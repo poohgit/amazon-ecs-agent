@@ -34,10 +34,10 @@ const orderingTimeout = 90 * time.Second
 // condition. We ensure that the task can be both started and stopped.
 func TestDependencyHealthCheck(t *testing.T) {
 	// Skip these tests on WS 2016 until the failures are root-caused.
-	isWindows2016, err := config.IsWindows2016()
-	if err == nil && isWindows2016 == true {
-		t.Skip()
-	}
+	//isWindows2016, err := config.IsWindows2016()
+	//if err == nil && isWindows2016 == true {
+		//t.Skip()
+	//}
 
 	taskEngine, done, _ := setupWithDefaultConfig(t)
 	defer done()
@@ -93,10 +93,10 @@ func TestDependencyHealthCheck(t *testing.T) {
 // with exit code 1. It ensures that the child is started and stopped before the parent starts.
 func TestDependencyComplete(t *testing.T) {
 	// Skip these tests on WS 2016 until the failures are root-caused.
-	isWindows2016, err := config.IsWindows2016()
-	if err == nil && isWindows2016 == true {
-		t.Skip()
-	}
+	//isWindows2016, err := config.IsWindows2016()
+	//if err == nil && isWindows2016 == true {
+	//	t.Skip()
+	//}
 
 	taskEngine, done, _ := setupWithDefaultConfig(t)
 	defer done()
@@ -152,10 +152,10 @@ func TestDependencyComplete(t *testing.T) {
 // with exit code 0. It ensures that the child is started and stopped before the parent starts.
 func TestDependencySuccess(t *testing.T) {
 	// Skip these tests on WS 2016 until the failures are root-caused.
-	isWindows2016, err := config.IsWindows2016()
-	if err == nil && isWindows2016 == true {
-		t.Skip()
-	}
+	//isWindows2016, err := config.IsWindows2016()
+	//if err == nil && isWindows2016 == true {
+		//t.Skip()
+	//}
 
 	taskEngine, done, _ := setupWithDefaultConfig(t)
 	defer done()
@@ -211,10 +211,10 @@ func TestDependencySuccess(t *testing.T) {
 // contrast to how COMPLETE behaves. Instead of starting the parent, the task should simply exit.
 func TestDependencySuccessErrored(t *testing.T) {
 	// Skip these tests on WS 2016 until the failures are root-caused.
-	isWindows2016, err := config.IsWindows2016()
-	if err == nil && isWindows2016 == true {
-		t.Skip()
-	}
+	//isWindows2016, err := config.IsWindows2016()
+	//if err == nil && isWindows2016 == true {
+	//	t.Skip()
+	//}
 
 	taskEngine, done, _ := setupWithDefaultConfig(t)
 	defer done()
@@ -264,10 +264,10 @@ func TestDependencySuccessErrored(t *testing.T) {
 // TestDependencySuccessTimeout
 func TestDependencySuccessTimeout(t *testing.T) {
 	// Skip these tests on WS 2016 until the failures are root-caused.
-	isWindows2016, err := config.IsWindows2016()
-	if err == nil && isWindows2016 == true {
-		t.Skip()
-	}
+	//isWindows2016, err := config.IsWindows2016()
+	//if err == nil && isWindows2016 == true {
+	//	t.Skip()
+	//}
 
 	taskEngine, done, _ := setupWithDefaultConfig(t)
 	defer done()
@@ -320,10 +320,10 @@ func TestDependencySuccessTimeout(t *testing.T) {
 // TestDependencyHealthyTimeout
 func TestDependencyHealthyTimeout(t *testing.T) {
 	// Skip these tests on WS 2016 until the failures are root-caused.
-	isWindows2016, err := config.IsWindows2016()
-	if err == nil && isWindows2016 == true {
-		t.Skip()
-	}
+	//isWindows2016, err := config.IsWindows2016()
+	//if err == nil && isWindows2016 == true {
+	//	t.Skip()
+	//}
 
 	taskEngine, done, _ := setupWithDefaultConfig(t)
 	defer done()
@@ -383,9 +383,9 @@ func TestDependencyHealthyTimeout(t *testing.T) {
 // TestShutdownOrder
 func TestShutdownOrder(t *testing.T) {
 	// Skip these tests on WS 2016 until the failures are root-caused.
-	isWindows2016, err := config.IsWindows2016()
-	if err == nil && isWindows2016 == true {
-		t.Skip()
+	//isWindows2016, err := config.IsWindows2016()
+	//if err == nil && isWindows2016 == true {
+		//t.Skip()
 	}
 
 	shutdownOrderingTimeout := 120 * time.Second
@@ -479,10 +479,10 @@ func TestShutdownOrder(t *testing.T) {
 
 func TestMultipleContainerDependency(t *testing.T) {
 	// Skip these tests on WS 2016 until the failures are root-caused.
-	isWindows2016, err := config.IsWindows2016()
-	if err == nil && isWindows2016 == true {
-		t.Skip()
-	}
+	//isWindows2016, err := config.IsWindows2016()
+	//if err == nil && isWindows2016 == true {
+		//t.Skip()
+	//}
 
 	taskEngine, done, _ := setupWithDefaultConfig(t)
 	defer done()
